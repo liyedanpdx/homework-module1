@@ -16,6 +16,10 @@ header{
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
     background-size: 1500px;
 }
+#cliffs header{
+    background: no-repeat lightgrey url(images/forest_cliff.jpg);
+    background-size: 1500px;
+}
 .main-header{
     background-color: rgb(255,255,255,0.8);
     width: 700px;
@@ -231,4 +235,29 @@ input[type="submit"] { /* attribute selector */
 select{
     width: 200px;
     text-align: center;
+}
+
+/* Cliff */
+#cliffs table{
+    width: 500px;
+    background:#fff;
+    margin: 0px;
+    padding:0px;
+    border-spacing: 0; /* Remove space between cells */
+}
+#cliffs table img{
+    width: 500px;
+}
+#cliffs caption{
+    padding-top: 15px;
+}
+#cliffs td,th{
+    width: 500px;
+    margin: 0px;
+    padding:0px;
+    background:#fff;
+    border: none;
+}
+#cliffs .table_td {
+    padding: 30px 50px;
 }

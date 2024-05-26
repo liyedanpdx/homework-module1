@@ -87,6 +87,7 @@
         var ampm; //Declare empty variable to storeAM Or PM
 
         var utchr = d.getUTCHours(); //Get current Greeenwich Mean Time (GMT)
+        console.log(utchr)
         var timeDiff; //To store time difference between GMT hour and Local hour
         var adjTimeDiff; //To store time difference converted to positive number
         var timeZone; //To store the 4 time zones (PT,MT,CT,ET)
@@ -110,11 +111,19 @@
             ampm = "AM";//Set to AM
         }
 
-
+        // Check if current date is within Daylight Saving Time period
+        var dstStart = new Date(d.getFullYear(), 2, 8); // Daylight Saving Time starts on March 8th
+        var dstEnd = new Date(d.getFullYear(), 10, 1); // Daylight Saving Time ends on November 1st
+        var isDst = d.getTime() >= dstStart.getTime() && d.getTime() < dstEnd.getTime();
 
         utchr12 = utchr % 12 || 12
         timeDiff = utchr12 - hr;
-        adjTimeDiff = timeDiff < 0 ? timeDiff + 12 : timeDiff;
+        // Adjust UTC hour if DST is in effect
+        if (isDst) {
+            adjTimeDiff = timeDiff < 0 ? timeDiff + 12 : timeDiff;
+            adjTimeDiff += 1; // Adjust UTC hour by 1 if DST is in effect
+        }
+        
         switch (adjTimeDiff) {
             case 5:
                 timeZone = "ET"; 

@@ -119,11 +119,11 @@
         utchr12 = utchr % 12 || 12
         timeDiff = utchr12 - hr;
         // Adjust UTC hour if DST is in effect
+        adjTimeDiff = timeDiff < 0 ? timeDiff + 12 : timeDiff;
         if (isDst) {
-            adjTimeDiff = timeDiff < 0 ? timeDiff + 12 : timeDiff;
             adjTimeDiff += 1; // Adjust UTC hour by 1 if DST is in effect
         }
-        
+
         switch (adjTimeDiff) {
             case 5:
                 timeZone = "ET"; 

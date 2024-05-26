@@ -261,3 +261,21 @@ select{
 #cliffs .table_td {
     padding: 30px 50px;
 }
+
+
+/* Clock */
+#timeofday {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);
+    padding: 20px 0px;
+    text-align: center; 
+}
+
+#timeofday span:nth-child(1) {
+    color: #3a3a3a;
+}
+#timeofday span:nth-child(2) {
+    color: #125688;
+}
+
+

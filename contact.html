@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body id="contact" onload="disableButton(true)"> 
+<body id="contact" onload="disableButton(true), disableEmailShow(true), disablePhoneShow(true)"> 
     <div id="container">
         <header>
             <div class="main-header">
@@ -63,9 +63,9 @@
                 <div class="selection">
                     <label for="contact">How should we contact you?</label>  
                     <select id="contactSelect" name="contact">
-                        <option value="select one">Select One</option>
-                        <option value="email">Email</option>
-                        <option value="phone">Phone</option>
+                        <option value="Select One">Select One</option>
+                        <option value="Email">Email</option>
+                        <option value="Phone">Phone</option>
                     </select>
                 </div>
                 <div id="enterEmailBlock">

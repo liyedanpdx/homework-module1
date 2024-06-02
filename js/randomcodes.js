@@ -16,11 +16,23 @@ function generateCode(){
 //Get HTML element to display
 document.getElementById("codes").innerHTML = generateCode();
 
-//Disable Button
-function disableButton(){
-    document.getElementById("submit").disabled = true
+//Determine who to able or disable button
+function disableButton(btnvalue){
+    document.getElementById("submit").disabled = btnvalue //able/disable button
+    if (btnvalue == true) { //test if button is disabled or enabled
+        //set button and label color translucent
+        document.getElementById("submit").style.backgroundColor = "rgba(73, 119, 209, 0.3)";
+        document.getElementById("submit").style.color = "rgba(255,255,255,0.5)";
+    } else {
+        //set button and label color with no transparency
+        document.getElementById("submit").style.backgroundColor = "rgba(73, 119, 209, 1)";
+        document.getElementById("submit").style.color = "rgba(255,255,255,1)";
+    }
 }
-//Acctive function
-disableButton();
+
+//listen to user input code
+var codebox = document.getElementById("codeentered"); // get textbox
+codebox.addEventListener("input", evaluateCode); // listen to code entered in textbox
+
 
 

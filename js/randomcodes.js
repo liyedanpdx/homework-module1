@@ -14,7 +14,8 @@ function generateCode(){
 }
 
 //Get HTML element to display
-document.getElementById("codes").innerHTML = generateCode();
+code = generateCode()
+document.getElementById("codes").innerHTML = code;
 
 //Determine who to able or disable button
 function disableButton(btnvalue){
@@ -34,5 +35,17 @@ function disableButton(btnvalue){
 var codebox = document.getElementById("codeentered"); // get textbox
 codebox.addEventListener("input", evaluateCode); // listen to code entered in textbox
 
-
+//run function if detected user had entered a character in textbox
+function evaluateCode(){
+    getCode = document.getElementById("codeentered").value; //get character entered
+    var charset1 = getCode.trim(); //remove any hidden characters generated
+    var charset2 = code.trim(); //remove any hidden characters generated
+    console.log("charset1:"+charset1+", charset2:"+charset2);
+    //test if code entered matches the number of generated characters
+    if (charset1.length == charset2.length && charset1 == charset2){
+        disableButton(false);//if match, run the function to enable button
+    } else {
+        disableButton(true);//if not match, run the function to disable button
+    }
+}
 

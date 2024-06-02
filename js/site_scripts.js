@@ -30,3 +30,4 @@ for (var i=0; i<6; i++){
 
 //display our images
 document.getElementById("partners").innerHTML=imageList.join(" ");
+

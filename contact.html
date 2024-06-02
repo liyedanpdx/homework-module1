@@ -55,12 +55,28 @@
                     <input type="text" name="phone" placeholder="xxx-xxx-xxxx"> 
                 </div>
                 
-                <div class="radios">
+                <!-- <div class="radios">
                     <label>How should we contact you?</label>  
                     <input type="radio" name="contact" value="email" checked>Email 
                     <input type="radio" name="contact" value="phone">Phone
+                </div> -->
+                <div class="selection">
+                    <label for="contact">How should we contact you?</label>  
+                    <select id="contactSelect" name="contact">
+                        <option value="select one">Select One</option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                    </select>
                 </div>
-            
+                <div id="enterEmailBlock">
+                    <label>Enter your Email</label>
+                    <input id="enterEmail" type="text">
+                </div>
+                <div id="enterPhoneBlock">
+                    <label>Enter your Phone</label>
+                    <input id="enterPhone" type="text">
+                </div>
+
                 <div class="selectmenu">
                     <label>Which Cliff are you inquiring?</label>  
                     <select>
@@ -128,5 +144,6 @@
     <!-- Partners -->
     <script src="js/site_scripts.js"></script>
     <script src="js/randomcodes.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

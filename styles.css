@@ -161,11 +161,15 @@ tbody{
     background:#EEFFE6;
     text-align: center;
 }
-th,td{
+thead th,td{
     width: 225px;
     height: 75px;
     vertical-align: middle;
     border: solid 1px #852818;
+}
+thead th{
+    font-weight: bold;
+    background: #BDE1FF;
 }
 th:first-child {
     width: 125px;
@@ -178,6 +182,7 @@ td:first-child{
     font-weight:bold;
     background:#BDE1FF;
 }
+
 
 /* Form */
 .contactinfo div{

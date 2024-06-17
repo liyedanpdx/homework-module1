@@ -17,13 +17,13 @@ var alts=[
 ]
 var imageList = [];
 var image;
-var openList = '<li class="partner">';
-var closeList = '</li>'
+var openList = '<div class="col">';
+var closeList = '</div>'
 
 //create for loop to create the 6 images
 for (var i=0; i<6; i++){
     //creat file name and add to array
-    photos.push('<img src="images/partners/partner-' + fileSuffix[i] +'.png"' + ' alt="' + alts[i] + '">');
+    photos.push('<img src="images/partners/partner-' + fileSuffix[i] +'.png"' + ' alt="' + alts[i] + '" class="partner">');
     image = openList + photos[i] + closeList;
     imageList.push(image);
 }

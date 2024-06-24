@@ -1,7 +1,10 @@
 /* Header */
 header {
     width: 100%;
-    min-height: 275px;
+    height: 40vw;
+}
+#timeofday{
+    margin-top: -130px;
 }
 /* 
 #home header{
@@ -23,19 +26,19 @@ header {
 */
 #home {
     background: no-repeat white url(images/cliff_ocean.jpg);
-    background-size: 100% 450px;
+    background-size: 100% auto;
 }
 #activities {
-    background: no-repeat white url(images/cliff_ocean.jpg);
-    background-size: 100% 450px;
+    background: no-repeat white url(images/runfly.jpg);
+    background-size: 100% auto;
 }
 #contact {
-    background: no-repeat white url(images/cliff_ocean.jpg);
-    background-size: 100% 450px;
+    background: no-repeat white url(images/cliff_rock.jpg);
+    background-size: 100% auto;
 }
 #cliffs {
-    background: no-repeat white url(images/cliff_ocean.jpg);
-    background-size: 100% 450px;
+    background: no-repeat white url(images/forest_cliff.jpg);
+    background-size: 100% auto;
 }
 
 /* Navigation */
@@ -391,6 +394,9 @@ td:first-child{
     min-height:50px;
     width: 300px;
     padding:0;
+}
+#activities main h1 {
+    margin-top: 20vw;
 }
 #activities main #result h4 {
     margin-bottom:1em;

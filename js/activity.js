@@ -18,16 +18,14 @@ $(document).ready(function() {
                     "color": "white",
                     "font-weight": "bold"
                 });
-
-
                 // Get the index of the clicked td within its row
                 var columnIndex = $(this).index();
                 // Find the th element in the header row corresponding to the clicked td
                 var thText = $("thead tr").find("th").eq(columnIndex).text();
-                $('#displaySelected').css("visibility","visible");//make display box visible
-                $('#displaySelected').css("margin-top","2em"); //add spaces above display box
-                $('#result').append("<p>"+content+" at "+thText+"</p>"); //add child element with contents of cell
-
+                // $('#displaySelected').css("visibility","visible");//make display box visible
+                // $('#displaySelected').css("margin-top","2em"); //add spaces above display box
+                $('.modal-body').append("<p>"+content+" at "+thText+"</p>"); //add child element with contents of cell
+                $('#myModal').modal('show');
             
             } else {//if selected cell don't have class
                 $(this).css({
@@ -35,12 +33,13 @@ $(document).ready(function() {
                     "color": "black",
                     "font-weight": "normal"
                 });
-                $('#result p:contains('+content+')').remove(); //remove child element
+                $('.modal-body p:contains('+content+')').remove(); //remove child element
                 
                 if($('#result').has('p').length == false) {//check if there are any child elements within parent
-                    $('#displaySelected').css("visibility","hidden"); //make display box hidden
-                    $('#displaySelected').css("margin-top","0");//remove spaces above display box
+                    // $('#displaySelected').css("visibility","hidden"); //make display box hidden
+                    // $('#displaySelected').css("margin-top","0");//remove spaces above display box
                 }
+                $('#myModal').modal('show');
             }
         }
     });

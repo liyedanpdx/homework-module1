@@ -9,57 +9,93 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* General styling */
+        .cliff-caption,
+        .cliff-body img {
+            width: 450px;
+        }
+        .cliff-caption {
+            background-color: brown;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+        .cliff-row .cliff-inner-table {
+            padding: 10px;
+        }
 
+        /* Flexbox layout for the table */
+        .cliff-table {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Flexbox layout for rows */
+        .cliff-row {
+            display: flex;
+            justify-content: center;
+        }
+        
+        /* Responsive layout for smaller screens */
+        @media (max-width: 900px) {
+            .cliff-table {
+                width: 100%;
+            }
+            .cliff-row {
+                flex-direction: column;
+                width: 100%;
+            }
+            .cliff-caption,
+            .cliff-body img {
+                width: 100%;
+            }
+        }
+
+
+    </style>
 </head>
 <body id="cliffs"> 
     <div id="container">
-        <header>
-            <div class="main-header">
-                <div class="logo">
-                    <img src="images/logo.png" alt="Great Cliffs Logo"width="125">
-                </div>
-                <!-- <nav class="main-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="cliffs.html">Cliffs</a></li>
-                        <li><a href="activities.html">Activities</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav> -->
-                <nav class="navbar navbar-expand-xl">
-                    <div class="container"> <!-- Ensure you have a container or container-fluid -->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
-                                aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="cliffs.html">Cliffs</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="activities.html">Activities</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
+        <div class="container sticky-top">
+            <nav class="navbar navbar-expand-xl navbar-dark">
+                <div class="container">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
                     </div>
-                </nav>
-            </div>
-        </header>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="cliffs.html">Cliffs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="activities.html">Activities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <header></header>
         <main>
             <h1>California's Greatest Cliffs</h1>
             <p>The greatest cliffs are these four cliffs located in southern California. Each of these cliffs have their own uniqueness and beauty: West Cliff, North Cliff, East Cliff and South Cliff are the pride of California. Each cliff has many amenities to offer visitors such as recreational areas, camping sites, wildlife watch spots and overnight cabins.</p>
             <p>No matter which direction you head from Irvine, California, the sites are easily reached within a 100 mile radius. West Cliff is the most popular among Westcliff University campus students because of its close proximity.</p>
             
-            <table>
+            <!-- <table>
                 <tr>
                     <td class="table_td">
                         <table>
@@ -112,7 +148,38 @@
                         </table>
                     </td>
                 </tr>
-            </table>
+            </table> -->
+            <div class="cliff-table">
+                <div class="cliff-row">
+                    <div class="cliff-inner-table">
+                        <div class="cliff-caption">West Cliff</div>
+                        <div class="cliff-body">
+                            <img src="images/cliff-west-sea.jpg" alt="Cliff West Sea">
+                        </div>
+                    </div>
+                    <div class="cliff-inner-table">
+                        <div class="cliff-caption">North Cliff</div>
+                        <div class="cliff-body">
+                            <img src="images/cliff-north-mountain.jpg" alt="Cliff North Mountain">
+                        </div>
+                    </div>
+                </div>
+                <div class="cliff-row">
+                    <div class="cliff-inner-table">
+                        <div class="cliff-caption">East Cliff</div>
+                        <div class="cliff-body">
+                            <img src="images/cliff-east-river.jpg" alt="Cliff East River">
+                        </div>
+                    </div>
+                    <div class="cliff-inner-table">
+                        <div class="cliff-caption">South Cliff</div>
+                        <div class="cliff-body">
+                            <img src="images/cliff-south-canyon.jpg" alt="Cliff South Canyon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </main>
         <section>
             <div class="container">
